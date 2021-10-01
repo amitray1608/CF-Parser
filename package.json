@@ -1,0 +1,27 @@
+{
+  "name": "cf-parser",
+  "version": "1.0.0",
+  "description": "Codeforces parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitray1608/CF-Parser.git"
+  },
+  "keywords": [
+    "CF"
+  ],
+  "author": "Amit Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitray1608/CF-Parser/issues"
+  },
+  "homepage": "https://github.com/amitray1608/CF-Parser#readme",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "cheerio": "^1.0.0-rc.10",
+    "fs": "0.0.1-security"
+  }
+}
