@@ -3,7 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 var fs = require('fs');
 
-url = 'https://codeforces.com/';
+url = 'http://codeforces.com/contest/1256/problem/C';
 
 const getTestCase = (dir, html) => {
     
@@ -19,10 +19,10 @@ const getTestCase = (dir, html) => {
     });
 
     $('div.output pre').each((i, elem) => {
-        data[i] = {
+        data[i] = ({
             ...data[i],
             output: $(elem).text()
-        };
+        });
     });
 
     console.log(data);
@@ -32,6 +32,12 @@ const getTestCase = (dir, html) => {
                 console.log(err);
             }
             console.log(`The file ${dir}/in${i}.txt was saved!`);
+        });
+        fs.writeFile(`${dir}/out${i}.txt`, test.output, (err) => {
+            if (err) {
+                console.log(err);
+            }
+            console.log(`The file ${dir}/out${i}.txt was saved!`);
         });
     })
     console.log(data);

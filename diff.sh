@@ -7,7 +7,7 @@ mainoutfiles=(`ls out*.txt`)
 
 yourfiles=(`ls yout*.txt`)
 
-echo ${mainoutfilesp[@]} ${yourfiles[@])}
+echo ${mainoutfiles[@]} ${yourfiles[@])}
 len=${#mainoutfiles[@]}
 
 for((i=0; i<$len; i++))
@@ -23,4 +23,3 @@ do
 done
 
 cd ..
-
